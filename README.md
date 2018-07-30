@@ -6,27 +6,6 @@
 
   opencc4php 是OpenCC的PHP扩展，能很智能的完成简繁体转换。 
   需要先安装OpenCC扩展 如果此处安装失败可去管方githup地址重新下载编译安装
- 
-  你需要先安装1.0.1 版本以上的OpenCC，
-  
-
-  安装OpenCC：
-  
-  git clone https://github.com/BYVoid/OpenCC.git --depth 1
-  cd OpenCC
-  make
-  sudo make install
-
-
-  安装opencc4php：
-
-  git clone git@github.com:NauxLiu/opencc4php.git --depth 1
-  cd opencc4php
-  phpize    
-  ./configure
-  make && sudo make install
-  
-  如果你的OpenCC安装目录不在/usr或/usr/local，可在./configure时添加--with-opencc=[DIR]指定你的OpenCC目录
 
   要注意phpzie的php版本  多个版本要指定 ./configure --with-php-config=/www/server/php/bin/php-config
 
@@ -43,8 +22,17 @@
   最后查看 php -m 是否有opencc  如果有则重启php开始使用 
   
   
-  #原文章作者给出的列子
-  $od = opencc_open("s2twp.json"); //传入配置文件名
-  $text = opencc_convert("我鼠标哪儿去了。", $od);
-  echo $text;
-  opencc_close($od);
+  
+  translate 
+  此文件夹是翻译的文件 此处简体转繁体主要是lang文件中的fanTi方法,调用的上面安装的扩展方法
+  
+  Lang.php 
+  翻译处理的文件
+  
+  Translate 
+  中文转英语的翻译
+  
+  
+  common.php
+  此处是TP5的公共类文件,适用于返回json数据类型的信息做出处理 目前支持 中文转英文,简体中文转繁体
+
