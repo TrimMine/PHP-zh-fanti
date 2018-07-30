@@ -1,6 +1,6 @@
 # PHP-zh-fanti
 简体转繁体  原文https://github.com/NauxLiu/opencc4php 
-
+错误参考文章 https://www.jianshu.com/p/a9d0b9241a27
 
   转载自 https://github.com/NauxLiu/opencc4php  中文简体转繁体文章 此处仅仅是写一些安装中遇到的问题
 
